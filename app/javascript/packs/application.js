@@ -13,3 +13,22 @@ import "bootstrap"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+global.toastr = require("toastr")
+import "../stylesheets/application"
+
+toastr.options = {
+  "closeButton": false,
+  "positionClass": "toast-top-right",
+  "preventDuplicates": false,
+  // action khi click vào thông báo
+  "onclick": null,
+ // thời gian, hiệu ứng hiển thị và ẩn
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
