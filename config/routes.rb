@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   resources :lists
   root "lists#index"
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  namespace :admin do
+    root to: "static_pages#index"
+    resources :static_pages
+  end
 end
